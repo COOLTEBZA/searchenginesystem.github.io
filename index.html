@@ -1,0 +1,50 @@
+
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/>
+<meta name='viewport'' content='width=620'/><title>HTML5 Demo: search engine system</title></head>
+<body>
+<div>
+<p><label for='data'>Your test data:</label>
+
+<input type='text'id='out' value="" onkeyup='c1()' style='border: 1px solid black;border-radius: 30px; :hover{background:red;}'/> 
+<input type='submit' value='Submit' onclick='c1()' style='border: 1px solid black;border-radius: 30px;'/>
+<br><b id='1'></b>
+<br>
+<b id='2'></b>
+<br>
+<b id='3'></b>
+</p></div>
+<script>
+
+ function c1(){
+ 
+
+var v = document.getElementById('out').value.toLowerCase();
+
+
+
+for(var i = 0; i < v.length; i++){  
+if(v.substring(i,i+2) == "go"){
+document.getElementById('1').innerHTML = "go";
+}
+if(v.substring(i,i+6) == "search"){
+ document.getElementById('2').innerHTML = "search"+ v.indexOf('search');
+}
+}
+
+
+
+/*-let array = ['c','b','a'];
+array.sort();
+ document.getElementById('2').innerHTML = "New Array: " + array;
+
+console.log("Sorted Array: " + array);*/
+}
+
+
+
+
+
+</script>
+
+
+</body></html>
